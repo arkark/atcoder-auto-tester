@@ -1,0 +1,3 @@
+command = "rdmd a{}.d"
+file_name = "a{}.d"
+task_url = "https://atcoder.jp/contests/practice/tasks/practice_{}"
