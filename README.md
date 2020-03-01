@@ -18,16 +18,31 @@ $ cargo install --path .
 
 ## Usage
 
-1. Create `.config.toml`:
-    ```toml
-    command = "rdmd {}.d"
-    file_name = "{}.d"
-    task_url = "https://atcoder.jp/contests/agc001/tasks/agc001_{}"
-    ```
-1. Execute: `$ atcoder-auto-tester`
+1. Create `.config.toml`.
+1. Execute: `$ atcoder-auto-tester`.
 1. Solve problems :)
 
-#### Help:
+### .config.toml
+
+Set `.config.toml` for AGC001 as follows:
+
+#### C++
+
+```toml
+command = "sh -c 'g++ {}.cpp && ./a.out'"
+file_name = "{}.cpp"
+task_url = "https://atcoder.jp/contests/agc001/tasks/agc001_{}"
+```
+
+#### D
+
+```toml
+command = "rdmd {}.d"
+file_name = "{}.d"
+task_url = "https://atcoder.jp/contests/agc001/tasks/agc001_{}"
+```
+
+### Help
 
 ```terminal
 $ atcoder-auto-tester --help
