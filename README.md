@@ -1,6 +1,10 @@
 atcoder-auto-tester
 ===
 
+[![](https://github.com/arkark/atcoder-auto-tester/workflows/Rust/badge.svg)](https://github.com/ArkArk/atcoder-auto-tester/actions)
+[![license: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/ArkArk/atcoder-auto-tester/blob/master/LICENSE)
+[![GitHub version](https://badge.fury.io/gh/arkark%2Fatcoder-auto-tester.svg)](https://badge.fury.io/gh/arkark%2Fatcoder-auto-tester)
+
 An auto tester for AtCoder. This tool monitors files and automatically runs tests when it detects file changes.
 
 ## Prerequisites
