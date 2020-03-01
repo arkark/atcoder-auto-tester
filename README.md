@@ -63,3 +63,7 @@ OPTIONS:
     -d, --test-directory <DIRECTORY>    Set a directory for saving test cases [default: .test]
     -t, --timeout <VALUE>               Set a time limit for test execution [unit: seconds] [default: 5]
 ```
+
+## License
+
+[MIT](https://github.com/ArkArk/atcoder-auto-tester/blob/master/LICENSE)
