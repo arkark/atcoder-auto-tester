@@ -31,17 +31,20 @@ impl Detector {
         Self::default()
     }
 
-    pub fn wait_file_names(self: &mut Self) -> Vec<String> {
+    pub fn wait_file_names(&mut self) -> Vec<String> {
         let mut file_names: Vec<String> = Self::wait_events(&mut self.inotify, &mut self.buffer)
             .filter_map(|e| Self::extract_file_name(&e))
             .collect();
-        assert!(!file_names.is_empty());
-        thread::sleep(time::Duration::from_millis(200));
-        file_names.extend(
-            Self::get_events(&mut self.inotify, &mut self.buffer)
-                .filter_map(|e| Self::extract_file_name(&e)),
-        );
-        file_names.into_iter().unique().collect()
+        if file_names.is_empty() {
+            self.wait_file_names()
+        } else {
+            thread::sleep(time::Duration::from_millis(200));
+            file_names.extend(
+                Self::get_events(&mut self.inotify, &mut self.buffer)
+                    .filter_map(|e| Self::extract_file_name(&e)),
+            );
+            file_names.into_iter().unique().collect()
+        }
     }
 
     fn file_changed(event: &inotify::Event<&std::ffi::OsStr>) -> bool {
@@ -96,7 +99,7 @@ impl FileGen {
 impl Iterator for FileGen {
     type Item = String;
 
-    fn next(self: &mut Self) -> Option<Self::Item> {
+    fn next(&mut self) -> Option<Self::Item> {
         if self.file_names.is_empty() {
             self.file_names = self.detector.wait_file_names();
         }
