@@ -1,6 +1,6 @@
 [package]
 name = "atcoder-auto-tester"
-version = "0.9.0"
+version = "0.9.1"
 authors = ["Ark <target.ark@gmail.com>"]
 description = "An auto tester for AtCoder. This tool monitors files and automatically runs tests when it detects file changes."
 repository = "https://github.com/arkark/atcoder-auto-tester"
