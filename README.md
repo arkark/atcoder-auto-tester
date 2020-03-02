@@ -8,6 +8,8 @@ atcoder-auto-tester
 
 An auto tester for AtCoder. This tool monitors files and automatically runs tests when it detects file changes.
 
+![](demo/demo.gif)
+
 ## Prerequisites
 
 - [online-judge-tools](https://github.com/kmyk/online-judge-tools)
