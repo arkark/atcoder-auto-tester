@@ -8,6 +8,7 @@ readme = "README.md"
 categories = ["command-line-utilities"]
 license = "MIT"
 edition = "2018"
+exclude = ["/demo"]
 
 [dependencies]
 clap = "2.33"
