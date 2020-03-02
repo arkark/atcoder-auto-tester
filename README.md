@@ -6,7 +6,7 @@ atcoder-auto-tester
 [![GitHub version](https://badge.fury.io/gh/arkark%2Fatcoder-auto-tester.svg)](https://badge.fury.io/gh/arkark%2Fatcoder-auto-tester)
 [![crates.io](https://img.shields.io/crates/v/atcoder-auto-tester.svg)](https://crates.io/crates/atcoder-auto-tester)
 
-An auto tester for AtCoder. This tool monitors files and automatically runs tests when it detects file changes.
+An auto tester for AtCoder. This CLI tool automatically downloads sample cases and runs tests when it detects file changes. Thanks [online-judge-tools](https://github.com/kmyk/online-judge-tools) :+1:
 
 ![](demo/demo.gif)
 
@@ -29,7 +29,7 @@ $ cargo install atcoder-auto-tester
 
 ### .config.toml
 
-Set `.config.toml` for AGC001 as follows:
+For example, set `.config.toml` for AGC001 as follows:
 
 #### C++
 
