@@ -26,7 +26,6 @@ impl Command {
     pub fn run(&self) -> process::ExitStatus {
         process::Command::new(&self.program)
             .args(&self.args)
-            .stdout(process::Stdio::piped())
             .spawn()
             .handle_error("Failed to execute child process")
             .wait()
