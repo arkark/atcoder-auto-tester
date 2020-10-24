@@ -2,7 +2,6 @@ use std::fs;
 use std::path;
 
 use serde_derive::Deserialize;
-use toml;
 
 use crate::error::ErrorHandleable;
 
